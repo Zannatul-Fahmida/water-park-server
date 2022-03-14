@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const serviceAccount = JSON.parse(`${process.env.FIREBASE_SERVICE_ACCOUNT}`)
+const serviceAccount = require('./water-park-website-firebase-adminsdk-w2h6y-807ff7b4b1.json')
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
